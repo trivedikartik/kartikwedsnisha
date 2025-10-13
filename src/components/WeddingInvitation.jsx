@@ -180,7 +180,7 @@ const WeddingInvitation = () => {
 
         {/* Dress code */}
         <div className={`dress-code ${showContent ? 'show' : ''}`}>
-          <p>👗 Dress Code</p>
+          <p>Dress Code</p>
           <div className="dress-grid">
             <div className="dress-card">
               <div className="swatch swatch-red"></div>
