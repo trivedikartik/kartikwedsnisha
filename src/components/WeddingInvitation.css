@@ -1294,13 +1294,11 @@
 
 /* Full Schedule */
 .full-schedule {
-  margin: 40px 0; /* align width with dress-code */
-  padding: 35px 16px;
+  margin: 0; /* full width flush */
+  padding: 35px 0; /* full-bleed like dress-code */
   border-radius: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,248,225,0.1) 100%);
+  background: transparent; /* remove card look */
   border: none;
-  border-top: 2px solid rgba(212, 175, 55, 0.3);
-  border-bottom: 2px solid rgba(212, 175, 55, 0.3);
   box-shadow: none;
   opacity: 0;
   transform: translateY(-20px);
@@ -1346,22 +1344,21 @@
   grid-template-columns: 1fr;
 }
 
+
 .schedule-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 16px 14px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,249,255,0.95) 100%);
-  border-radius: 12px;
+  padding: 12px 4px; /* simpler, flatter spacing */
+  background: transparent; /* no inner cards */
+  border-radius: 0;
   border-left: 4px solid #d4af37;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  backdrop-filter: blur(10px);
+  box-shadow: none;
+  transition: transform 0.25s ease;
 }
 
 .schedule-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
 .schedule-icon {
@@ -1384,7 +1381,7 @@
 .schedule-content h4 {
   font-family: 'Playfair Display', serif;
   font-size: 1.15em;
-  color: #8a1538;
+  color: #fff8e1; /* brighter for visibility */
   margin: 0 0 6px 0;
   letter-spacing: 0.5px;
   font-weight: 600;
@@ -1392,17 +1389,17 @@
 
 .schedule-time {
   font-family: 'Arial', sans-serif;
-  font-size: 0.92em;
-  color: #666;
+  font-size: 0.95em;
+  color: #ffd36b; /* gold for contrast */
   margin: 0;
-  font-weight: 500;
-  line-height: 1.4;
+  font-weight: 600;
+  line-height: 1.5;
 }
 
 .schedule-note {
   font-family: 'Georgia', serif;
   font-size: 0.95em;
-  color: #666;
+  color: #f0f0f0; /* light text on dark bg */
   margin-top: 4px;
 }
 
