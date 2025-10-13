@@ -1108,12 +1108,11 @@
   box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
 
-/* Tweak rail offset on very small phones to avoid overlap */
+/* Move text slightly left on small phones (keep rail position) */
 @media (max-width: 400px) {
-  .dress-code::before { left: 22px; }
-  .dress-card { padding-left: 64px; }
-  .swatch { left: 6px; width: 34px; height: 34px; }
-  .dress-card::before { left: 22px; }
+  .dress-card { padding-left: 68px; }
+  .swatch { width: 34px; height: 34px; }
+  .dress-code > p { padding-left: 56px; text-align: left; }
 }
 
 .swatch-red { background: #b71c1c; }
