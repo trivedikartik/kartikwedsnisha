@@ -993,7 +993,7 @@
 /* Dress code */
 .dress-code {
   text-align: center;
-  margin: 40px -16px;
+  margin: 40px 0; /* avoid negative margins that can cause overflow */
   padding: 35px 16px;
   background: linear-gradient(135deg, rgba(248,249,255,0.12) 0%, rgba(255,255,255,0.08) 100%);
   border-radius: 0;
@@ -1003,7 +1003,10 @@
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.8s ease 1.4s;
-  width: calc(100% + 32px);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; /* ensure children don't overflow horizontally */
 }
 
 .dress-code.show {
@@ -1423,15 +1426,19 @@
 
 @media (min-width: 768px) {
   .full-schedule {
-    margin: 50px -30px;
+    margin: 50px 0;
     padding: 45px 30px;
-    width: calc(100% + 60px);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .dress-code {
-    margin: 50px -30px;
+    margin: 50px 0;
     padding: 45px 30px;
-    width: calc(100% + 60px);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
   .address-section {
@@ -1472,9 +1479,10 @@
     gap: 30px;
   }
   
+  /* Keep heart divider upright on mobile */
   .heart-divider-container {
-    transform: rotate(90deg);
-    margin: 20px 0;
+    transform: none;
+    margin: 10px 0 0 0;
   }
   
   .connecting-line {
@@ -1482,9 +1490,9 @@
   }
   
   .union-text {
-    transform: rotate(-90deg);
+    transform: none;
     margin-top: 10px;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   
   .photo-frame { 
