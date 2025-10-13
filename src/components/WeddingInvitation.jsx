@@ -255,10 +255,13 @@ const WeddingInvitation = () => {
           </div>
         </div>
 
-        {/* Footer */}
+        {/* Footer - Unique Ribbon Banner */}
         <div className={`footer ${showContent ? 'show' : ''}`}>
-          <div className="flower-divider">🌸 ✨ 🌸</div>
-          <p className="footer-text">We can't wait to celebrate with you!</p>
+          <div className="footer-banner">
+            <div className="footer-garland top">🌸 ✨ 🌸 ✨ 🌸</div>
+            <p className="footer-quote">We can't wait to celebrate with you!</p>
+            <div className="footer-garland bottom">🌸 ✨ 🌸 ✨ 🌸</div>
+          </div>
         </div>
       </div>
 
