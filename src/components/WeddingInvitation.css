@@ -1004,6 +1004,7 @@
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  position: relative; /* for left rail */
 }
 
 .dress-code.show {
@@ -1023,25 +1024,45 @@
 }
 
 .dress-grid {
-  margin-top: 16px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 8px 16px;
+  margin-top: 6px;
+  display: block; /* vertical list like timeline */
   width: 100%;
+  position: relative;
+}
+
+/* Left rail for dress code */
+.dress-code::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, rgba(212,175,55,0.6), rgba(255,211,107,0.6));
+  border-radius: 2px;
 }
 
 .dress-card {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 12px;
   background: transparent; /* remove inner cards */
   border-radius: 0;
-  padding: 10px 12px;
+  padding: 14px 12px 14px 76px; /* space for swatch node */
   border: none;
   box-shadow: none;
+  margin: 6px 0;
+  transition: transform 0.2s ease;
 }
 
+.dress-card:hover { transform: translateY(-2px); }
+
 .swatch {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -1070,6 +1091,21 @@
   color: #e9e9e9; /* lighter text for dark gradient */
   margin: 0;
   line-height: 1.5;
+}
+
+/* Dot marker aligned to rail (over the swatch center) */
+.dress-card::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: #ffd36b;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
 
 .swatch-red { background: #b71c1c; }
