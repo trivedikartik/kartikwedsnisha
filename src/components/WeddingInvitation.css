@@ -993,20 +993,17 @@
 /* Dress code */
 .dress-code {
   text-align: center;
-  margin: 40px 0; /* avoid negative margins that can cause overflow */
-  padding: 35px 16px;
-  background: linear-gradient(135deg, rgba(248,249,255,0.12) 0%, rgba(255,255,255,0.08) 100%);
+  margin: 0; /* full width flush with container */
+  padding: 35px 0; /* remove side padding to feel full-width */
+  background: transparent; /* no card background */
+  border: none; /* no section borders */
   border-radius: 0;
-  border: none;
-  border-top: 2px solid rgba(138, 21, 56, 0.2);
-  border-bottom: 2px solid rgba(138, 21, 56, 0.2);
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.8s ease 1.4s;
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-  overflow: hidden; /* ensure children don't overflow horizontally */
 }
 
 .dress-code.show {
@@ -1026,31 +1023,22 @@
 }
 
 .dress-grid {
-  margin-top: 20px;
+  margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 12px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 8px 16px;
+  width: 100%;
 }
 
 .dress-card {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(255,255,255,0.95);
-  border-radius: 12px;
-  padding: 14px 16px;
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  backdrop-filter: blur(10px);
-}
-
-.dress-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
+  background: transparent; /* remove inner cards */
+  border-radius: 0;
+  padding: 10px 12px;
+  border: none;
+  box-shadow: none;
 }
 
 .swatch {
@@ -1058,7 +1046,7 @@
   height: 36px;
   border-radius: 50%;
   border: 3px solid #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: none; /* flatter look */
   flex-shrink: 0;
 }
 
@@ -1428,16 +1416,16 @@
 
 @media (min-width: 768px) {
   .full-schedule {
-    margin: 50px 0;
-    padding: 45px 30px;
+    margin: 40px 0;
+    padding: 45px 0; /* full-bleed look */
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
   }
   
   .dress-code {
-    margin: 50px 0;
-    padding: 45px 30px;
+    margin: 40px 0;
+    padding: 45px 0; /* full-bleed look to match */
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
