@@ -34,58 +34,81 @@ const WeddingInvitation = () => {
           <div className="rings-icon">💍</div>
           <h1 className="invitation-title">Shubh Vivah</h1>
           <div className="divider"></div>
-          <p className="save-the-date">Nisha weds Kartik</p>
+          <p className="save-the-date">Kartik Weds Nisha</p>
         </div>
 
         {/* Couple Photos Section */}
         <div className={`couple-photos ${showContent ? 'show' : ''}`}>
-          <div className="photo-container bride-photo-container">
-            <div className="photo-frame">
-              <img 
-                loading="lazy"
-                src="/bride.jpg" 
-                alt="Portrait of Bride Nisha" 
-                className="couple-photo"
-              />
-              <div className="photo-overlay">
-                <div className="floral-corner tl"></div>
-                <div className="floral-corner tr"></div>
-                <div className="floral-corner bl"></div>
-                <div className="floral-corner br"></div>
+          <div className="photos-wrapper">
+            {/* Bride Section */}
+            
+            <div className="photo-container groom-photo-container">
+              <div className="photo-frame-wrapper">
+                <div className="ornate-frame">
+                  <div className="frame-corner frame-tl"></div>
+                  <div className="frame-corner frame-tr"></div>
+                  <div className="frame-corner frame-bl"></div>
+                  <div className="frame-corner frame-br"></div>
+                </div>
+                <div className="photo-frame">
+                  <img 
+                    loading="lazy"
+                    src="/groom.jpg" 
+                    alt="Portrait of Groom Kartik" 
+                    className="couple-photo"
+                  />
+                  <div className="photo-shine"></div>
+                </div>
+              </div>
+              <div className="photo-info">
+                <h3 className="photo-label">The Groom</h3>
+                <p className="photo-name">Kartik</p>
               </div>
             </div>
-            <h3 className="photo-label">The Bride</h3>
-          </div>
 
-          <div className="heart-divider">
-            <span className="heart-beat">💕</span>
-          </div>
+            {/* Center Divider */}
+            <div className="heart-divider-container">
+              <div className="connecting-line line-left"></div>
+              <div className="heart-circle">
+                <span className="heart-icon">💕</span>
+                <div className="heart-rings">
+                  <div className="ring ring-1"></div>
+                  <div className="ring ring-2"></div>
+                </div>
+              </div>
+              <div className="connecting-line line-right"></div>
+            </div>
 
-          <div className="photo-container groom-photo-container">
-            <div className="photo-frame">
-              <img 
-                loading="lazy"
-                src="/groom.jpg" 
-                alt="Portrait of Groom Kartik" 
-                className="couple-photo"
-              />
-              <div className="photo-overlay">
-                <div className="floral-corner tl"></div>
-                <div className="floral-corner tr"></div>
-                <div className="floral-corner bl"></div>
-                <div className="floral-corner br"></div>
+            
+
+            {/* Groom Section */}
+            <div className="photo-container bride-photo-container">
+              <div className="photo-frame-wrapper">
+                <div className="ornate-frame">
+                  <div className="frame-corner frame-tl"></div>
+                  <div className="frame-corner frame-tr"></div>
+                  <div className="frame-corner frame-bl"></div>
+                  <div className="frame-corner frame-br"></div>
+                </div>
+                <div className="photo-frame">
+                  <img 
+                    loading="lazy"
+                    src="/bride.jpg" 
+                    alt="Portrait of Bride Nisha" 
+                    className="couple-photo"
+                  />
+                  <div className="photo-shine"></div>
+                </div>
+              </div>
+              <div className="photo-info">
+                <h3 className="photo-label">The Bride</h3>
+                <p className="photo-name">Nisha</p>
               </div>
             </div>
-            <h3 className="photo-label">The Groom</h3>
           </div>
         </div>
 
-        {/* Couple names */}
-        <div className={`couple-names ${showContent ? 'show' : ''}`}>
-          <h2 className="bride-name">Nisha</h2>
-          <div className="and-symbol">&</div>
-          <h2 className="groom-name">Kartik</h2>
-        </div>
+      
 
         {/* Invitation message */}
         <div className={`invitation-message ${showContent ? 'show' : ''}`}>
@@ -97,17 +120,9 @@ const WeddingInvitation = () => {
 
         {/* Date/Time/Venue section removed for full-screen mobile layout */}
 
-        {/* Reception details */}
-        <div className={`reception-details ${showContent ? 'show' : ''}`}>
-          <div className="divider-small"></div>
-          <h3>Reception to follow</h3>
-          <p>Dinner & Dancing</p>
-          <div className="divider-small"></div>
-        </div>
-
         {/* Full Schedule (mobile-first) */}
         <div className={`full-schedule ${showContent ? 'show' : ''}`}>
-          <h2 className="section-title">{isGujarati ? 'મંગલ વિધિઓ' : 'Ceremony Schedule'}</h2>
+          <h2 className="section-title">Ceremony Schedule</h2>
           <div className="schedule-grid mobile-one">
             <div className="schedule-item">
               <div className="schedule-icon">🙏</div>
@@ -201,6 +216,41 @@ const WeddingInvitation = () => {
                 <h4>Marriage</h4>
                 <p>Off White</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Address Section */}
+        <div className={`address-section ${showContent ? 'show' : ''}`}>
+          <div className="address-icon-container">
+            <div className="address-icon">📍</div>
+            <div className="decorative-line"></div>
+          </div>
+          <h3 className="address-title">Venue Address</h3>
+          <div className="address-content">
+            <p className="venue-name">🏛️ Bramhsamaj Community Hall</p>
+            <p className="venue-address">
+              Bramhsamaj Chowk, Raiya Road<br />
+              Bramhsamaj Society 1<br />
+              Rajkot - 360007
+            </p>
+            <a 
+              href="https://maps.app.goo.gl/DWSvt4w9qPsvEzk5A" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="map-button"
+            >
+              📌 Open in Google Maps
+            </a>
+            
+            <div className="contact-info">
+              <div className="contact-divider"></div>
+              <p className="contact-label">For any queries, contact:</p>
+              <p className="contact-details">
+                <span className="contact-icon">📞</span>
+                <span className="contact-name">Manish Trivedi</span>
+                <a href="tel:+918758520787" className="contact-number">8758520787</a>
+              </p>
             </div>
           </div>
         </div>
