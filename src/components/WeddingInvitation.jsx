@@ -30,15 +30,18 @@ const WeddingInvitation = () => {
         <div className="corner corner-bottom-right"></div>
 
         {/* Header with rings */}
-        <div className={`header ${showContent ? 'show' : ''}`}>
-          <div className="rings-icon">💍</div>
+        <div className={`header section theme-ivory ${showContent ? 'show' : ''}`}>
+          <div className="rings-icon">
+            <span className="ring">💍</span>
+            <span className="ring ring-right">💍</span>
+          </div>
           <h1 className="invitation-title">Shubh Vivah</h1>
           <div className="divider"></div>
           <p className="save-the-date">Kartik Weds Nisha</p>
         </div>
 
         {/* Couple Photos Section */}
-        <div className={`couple-photos ${showContent ? 'show' : ''}`}>
+        <div className={`couple-photos section theme-rose ${showContent ? 'show' : ''}`}>
           <div className="photos-wrapper">
             {/* Bride Section */}
             
@@ -81,7 +84,7 @@ const WeddingInvitation = () => {
 
             
 
-            {/* Groom Section */}
+            {/* Bride Section */}
             <div className="photo-container bride-photo-container">
               <div className="photo-frame-wrapper">
                 <div className="ornate-frame">
@@ -111,7 +114,7 @@ const WeddingInvitation = () => {
       
 
         {/* Invitation message */}
-        <div className={`invitation-message ${showContent ? 'show' : ''}`}>
+        <div className={`invitation-message section theme-ivory ${showContent ? 'show' : ''}`}>
           <p className="message-text">
             Together with their families, request the honor of your presence
             at the celebration of their marriage
@@ -121,7 +124,7 @@ const WeddingInvitation = () => {
         {/* Date/Time/Venue section removed for full-screen mobile layout */}
 
         {/* Full Schedule (mobile-first) */}
-        <div className={`full-schedule ${showContent ? 'show' : ''}`}>
+        <div className={`full-schedule section theme-plum ${showContent ? 'show' : ''}`}>
           <h2 className="section-title">Ceremony Schedule</h2>
           <div className="schedule-grid mobile-one">
             <div className="schedule-item">
@@ -179,7 +182,7 @@ const WeddingInvitation = () => {
         {/* RSVP section removed per request */}
 
         {/* Dress code */}
-        <div className={`dress-code ${showContent ? 'show' : ''}`}>
+        <div className={`dress-code section theme-mint ${showContent ? 'show' : ''}`}>
           <p>Dress Code</p>
           <div className="dress-grid">
             <div className="dress-card">
@@ -221,7 +224,7 @@ const WeddingInvitation = () => {
         </div>
 
         {/* Address Section */}
-        <div className={`address-section ${showContent ? 'show' : ''}`}>
+        <div className={`address-section section theme-amber ${showContent ? 'show' : ''}`}>
           <div className="address-icon-container">
             <div className="address-icon">📍</div>
             <div className="decorative-line"></div>
